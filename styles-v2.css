@@ -81,3 +81,7 @@
   #research .research-figure,
   #research .robot-figure{height:250px}
 }
+
+/* Professional headshot tuning */
+.profile-photo{object-position:center 38% !important;}
+@media(min-width:821px){.hero-side{max-width:280px;justify-self:end;}}

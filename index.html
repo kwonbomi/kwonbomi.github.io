@@ -6,7 +6,74 @@
 <meta name="description" content="Bomi Kwon — structured and controllable generative modeling, diffusion models, and text-conditioned generation.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-v2.css">
+
+<style>
+  #research { overflow-x: hidden !important; }
+
+  #research .research-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+    gap: 28px !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  #research .figure-link,
+  #research .research-figure,
+  #research .project-body {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #research .figure-link {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  #research .research-figure {
+    width: 100% !important;
+    height: 245px !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+    background: #fff !important;
+    border: 1px solid #ecebe7 !important;
+    border-radius: 16px !important;
+  }
+
+  #research .research-figure img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  #research .robot-figure {
+    height: 245px !important;
+    background: #fafafa !important;
+  }
+
+  @media (max-width: 900px) {
+    #research .research-card {
+      grid-template-columns: 1fr !important;
+    }
+    #research .research-figure,
+    #research .robot-figure {
+      height: 250px !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 <header><div class="container nav"><a class="brand" href="#top">Bomi Kwon</a><nav><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="Bomi_Kwon_CV.pdf" target="_blank">CV</a></nav></div></header>

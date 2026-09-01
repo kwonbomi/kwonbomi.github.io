@@ -1,12 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Bomi Kwon</title>
-<meta name="description" content="Bomi Kwon — structured and controllable generative modeling, diffusion models, and text-conditioned generation.">
+
+<meta
+  name="description"
+  content="Bomi Kwon — diffusion models for language-conditioned structured generation, including scene graphs and human/robot poses."
+>
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bomi Kwon">
-<meta property="og:description" content="Structured and controllable generative modeling, diffusion models, and text-conditioned generation.">
+<meta
+  property="og:description"
+  content="Diffusion models for language-conditioned structured generation, including scene graphs and human/robot poses."
+>
 <meta property="og:url" content="https://kwonbomi.github.io/">
 <meta property="og:image" content="https://kwonbomi.github.io/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -14,14 +24,26 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bomi Kwon">
-<meta name="twitter:description" content="Structured and controllable generative modeling, diffusion models, and text-conditioned generation.">
+<meta
+  name="twitter:description"
+  content="Diffusion models for language-conditioned structured generation, including scene graphs and human/robot poses."
+>
 <meta name="twitter:image" content="https://kwonbomi.github.io/assets/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
+  rel="stylesheet"
+>
+
 <link rel="stylesheet" href="styles-v3.css">
 
 <style>
-  #research { overflow-x: hidden !important; }
+  #research {
+    overflow-x: hidden !important;
+  }
 
   #research .research-card {
     display: grid !important;
@@ -75,10 +97,37 @@
     background: #fafafa !important;
   }
 
+  /* Inline academic links */
+  .inline-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(31, 91, 83, 0.45);
+  }
+
+  .inline-link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  /* Author line inside research cards */
+  .authors {
+    margin-top: 0.45rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+    color: #666;
+  }
+
+  .authors strong {
+    color: #333;
+    font-weight: 600;
+  }
+
   @media (max-width: 900px) {
     #research .research-card {
       grid-template-columns: 1fr !important;
     }
+
     #research .research-figure,
     #research .robot-figure {
       height: 250px !important;
@@ -87,107 +136,511 @@
 </style>
 
 </head>
+
 <body>
-<header><div class="container nav"><a class="brand" href="#top">Bomi Kwon</a><nav><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="bomicv.pdf" target="_blank">CV</a></nav></div></header>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Bomi Kwon</a>
+
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="bomicv.pdf" target="_blank">CV</a>
+    </nav>
+  </div>
+</header>
+
 <main id="top">
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
 <section class="hero container">
-<div class="hero-copy">
-<p class="eyebrow">M.S. Student in Computer Science · Sookmyung Women’s University</p>
-<h1>Bomi Kwon</h1>
-<p class="research-line">I work on <strong>structured and controllable generative modeling</strong>, with a focus on diffusion models that generate structured outputs such as scene graphs and human/robot poses from language.</p>
-<p class="bio">I am a graduate researcher in the Data Intelligence Laboratory at Sookmyung Women’s University. My current research explores how generative models can better represent structure, follow language conditions, and satisfy task-specific constraints.</p>
-<div class="hero-links"><a class="button primary" href="mailto:bomi9970@sookmyung.ac.kr">bomi9970@sookmyung.ac.kr</a><a class="button" href="bomicv.pdf" target="_blank">CV</a></div>
-<div class="research-interests">
-<span>Research Interests</span>
-<p>Diffusion models, structured and controllable generation, and text-conditioned generation. Applications to scene graphs, human poses, and physically constrained humanoid robots.</p>
-</div>
-</div>
-<aside class="hero-side">
-<img src="assets/profile.jpg" alt="Bomi Kwon" class="profile-photo">
-</aside>
+
+  <div class="hero-copy">
+
+    <p class="eyebrow">
+      M.S. Student in Computer Science · Sookmyung Women’s University
+    </p>
+
+    <h1>Bomi Kwon</h1>
+
+    <p class="research-line">
+      I develop <strong>diffusion models that turn language into structured outputs</strong>
+      such as scene graphs and human/robot poses.
+    </p>
+
+    <p class="bio">
+      I am a graduate researcher in the
+      <a
+        class="inline-link"
+        href="http://cs.sookmyung.ac.kr/~kylee/dilab/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Data Intelligence Laboratory</a>
+      at Sookmyung Women’s University, advised by
+      <a
+        class="inline-link"
+        href="http://cs.sookmyung.ac.kr/~kylee/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Prof. Ki Yong Lee</a>.
+    </p>
+
+    <div class="hero-links">
+      <a
+        class="button primary"
+        href="mailto:bomi9970@sookmyung.ac.kr"
+      >bomi9970@sookmyung.ac.kr</a>
+
+      <a
+        class="button"
+        href="bomicv.pdf"
+        target="_blank"
+      >CV</a>
+    </div>
+
+    <div class="research-interests">
+      <span>Research Interests</span>
+      <p>
+        Structured generation · Controllable generative modeling ·
+        Diffusion models · Constraint-aware generation
+      </p>
+    </div>
+
+  </div>
+
+  <aside class="hero-side">
+    <img
+      src="assets/profile.jpg"
+      alt="Bomi Kwon"
+      class="profile-photo"
+    >
+  </aside>
+
 </section>
+
+
+<!-- ========================================================
+     RESEARCH
+========================================================= -->
+
 <section id="research" class="section container">
-<div class="section-heading">
-<p class="eyebrow">Selected work</p>
-<h2>Research</h2>
-<p>Three projects that best represent my current research direction.</p>
-</div>
 
-<article class="research-card featured">
-<a class="figure-link" href="assets/cikm_pipeline.png" target="_blank" aria-label="Open CIKM project figure">
-<div class="research-figure">
-<img src="assets/cikm_pipeline.png" alt="Pipeline and slot-time representation for text-conditioned scene graph sequence generation">
-</div>
-</a>
-<div class="project-body">
-<div class="meta"><b>CIKM 2026 · Short Paper</b><span>2025–2026</span></div>
-<h3>Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion</h3>
-<p>A discrete diffusion framework for generating time-ordered scene graph sequences directly from natural-language descriptions of human–object interactions. I led the project end-to-end as first author, from problem formulation and model design to experiments and manuscript preparation.</p>
-<div class="tags"><span>Discrete Diffusion</span><span>Scene Graphs</span><span>Language Conditioning</span></div>
+  <div class="section-heading">
+    <p class="eyebrow">Selected work</p>
+    <h2>Research</h2>
+    <p>
+      Selected projects on language-conditioned structured generation
+      and controllable diffusion models.
+    </p>
+  </div>
 
-</div>
-</article>
 
-<article class="research-card">
-<a class="figure-link" href="assets/humanoid_robots.png" target="_blank" aria-label="Open humanoid pose examples">
-<div class="research-figure robot-figure">
-<img src="assets/humanoid_robots.png" alt="Examples of generated humanoid robot poses">
-</div>
-</a>
-<div class="project-body">
-<div class="meta"><b>Current Research</b><span>2026</span></div>
-<h3>Text-Conditioned Humanoid Robot Pose Generation with Physical Constraints</h3>
-<p>A text-conditioned diffusion model for generating physically valid static poses for the Unitree G1. The work retargets human motion data in MuJoCo and incorporates joint-range and self-collision constraints into generation.</p>
-<div class="tags"><span>Diffusion</span><span>Physical Constraints</span><span>MuJoCo</span><span>Unitree G1</span></div>
-</div>
-</article>
+  <!-- CIKM -->
+  <article class="research-card featured">
 
-<article class="research-card">
-<a class="figure-link" href="assets/tkips_pipeline.png" target="_blank" aria-label="Open TKIPS project figure">
-<div class="research-figure">
-<img src="assets/tkips_pipeline.png" alt="Directional-angle diffusion and forward-kinematics pipeline for 2D pose generation">
-</div>
-</a>
-<div class="project-body">
-<div class="meta"><b>The Transactions of the Korea Information Processing Society</b><span>2026</span></div>
-<h3>Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space</h3>
-<p>A text-to-pose diffusion model that represents each body segment by its directional angles rather than joint coordinates, enabling language-driven pose generation while preserving consistent body proportions.</p>
-<div class="tags"><span>DDPM</span><span>Pose Generation</span><span>Directional Angles</span><span>BGE-M3</span></div>
-<a class="paper" href="https://doi.org/10.3745/TKIPS.2026.15.7.610" target="_blank">Paper ↗</a>
-</div>
-</article>
+    <a
+      class="figure-link"
+      href="assets/cikm_pipeline.png"
+      target="_blank"
+      aria-label="Open CIKM project figure"
+    >
+      <div class="research-figure">
+        <img
+          src="assets/cikm_pipeline.png"
+          alt="Pipeline and slot-time representation for text-conditioned scene graph sequence generation"
+        >
+      </div>
+    </a>
+
+    <div class="project-body">
+
+      <div class="meta">
+        <b>CIKM 2026 · Short Paper</b>
+        <span>2025–2026</span>
+      </div>
+
+      <h3>
+        Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion
+      </h3>
+
+      <p class="authors">
+        <strong>Bomi Kwon</strong>, Ki Yong Lee
+      </p>
+
+      <p>
+        A discrete diffusion framework for generating time-ordered scene graph
+        sequences directly from natural-language descriptions of human–object
+        interactions.
+      </p>
+
+      <div class="tags">
+        <span>Discrete Diffusion</span>
+        <span>Scene Graphs</span>
+        <span>Language Conditioning</span>
+      </div>
+
+      <!--
+      CIKM PAPER LINK:
+      Once the ACM / arXiv / proceedings URL is public, uncomment this
+      and replace the URL below.
+
+      <a
+        class="paper"
+        href="PASTE_CIKM_PAPER_URL_HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Paper ↗</a>
+      -->
+
+    </div>
+
+  </article>
+
+
+  <!-- HUMANOID -->
+  <article class="research-card">
+
+    <a
+      class="figure-link"
+      href="assets/humanoid_robots.png"
+      target="_blank"
+      aria-label="Open humanoid pose examples"
+    >
+      <div class="research-figure robot-figure">
+        <img
+          src="assets/humanoid_robots.png"
+          alt="Examples of generated humanoid robot poses"
+        >
+      </div>
+    </a>
+
+    <div class="project-body">
+
+      <div class="meta">
+        <b>Current Research</b>
+        <span>2026</span>
+      </div>
+
+      <h3>
+        Text-Conditioned Humanoid Robot Pose Generation with Physical Constraints
+      </h3>
+
+      <p class="authors">
+        <strong>Bomi Kwon</strong>, S. Park, Y. Park, Ki Yong Lee
+      </p>
+
+      <p>
+        A text-conditioned diffusion model for generating static poses for the
+        Unitree G1 under joint-range and self-collision constraints. Human motion
+        data are retargeted to the robot in MuJoCo for constraint-aware generation.
+      </p>
+
+      <div class="tags">
+        <span>Diffusion</span>
+        <span>Physical Constraints</span>
+        <span>MuJoCo</span>
+        <span>Unitree G1</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- 2D POSE -->
+  <article class="research-card">
+
+    <a
+      class="figure-link"
+      href="assets/tkips_pipeline.png"
+      target="_blank"
+      aria-label="Open TKIPS project figure"
+    >
+      <div class="research-figure">
+        <img
+          src="assets/tkips_pipeline.png"
+          alt="Directional-angle diffusion and forward-kinematics pipeline for 2D pose generation"
+        >
+      </div>
+    </a>
+
+    <div class="project-body">
+
+      <div class="meta">
+        <b>The Transactions of the Korea Information Processing Society</b>
+        <span>2026</span>
+      </div>
+
+      <h3>
+        Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space
+      </h3>
+
+      <p class="authors">
+        <strong>Bomi Kwon</strong>, Ki Yong Lee
+      </p>
+
+      <p>
+        A text-to-pose diffusion model that represents body segments by their
+        directional angles rather than joint coordinates, enabling language-driven
+        pose generation while preserving consistent skeletal proportions.
+      </p>
+
+      <div class="tags">
+        <span>DDPM</span>
+        <span>Pose Generation</span>
+        <span>Directional Angles</span>
+        <span>BGE-M3</span>
+      </div>
+
+      <a
+        class="paper"
+        href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Paper ↗</a>
+
+    </div>
+
+  </article>
+
 </section>
+
+
+<!-- ========================================================
+     PUBLICATIONS
+========================================================= -->
+
 <section id="publications" class="section container">
-<div class="section-heading publications-heading">
-<h2>Publications</h2>
-</div>
-<div class="pubs">
-<div class="pub">
-<span>2026</span>
-<div>
-<h3>Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion</h3>
-<p><strong>Bomi Kwon</strong>, Ki Yong Lee</p>
-<p class="muted">35th ACM International Conference on Information and Knowledge Management (CIKM ’26) · Accepted Short Paper</p>
 
-</div>
-</div>
-<div class="pub">
-<span>2026</span>
-<div>
-<h3>Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space</h3>
-<p><strong>Bomi Kwon</strong>, Ki Yong Lee</p>
-<p class="muted">The Transactions of the Korea Information Processing Society, 15(7), 610–619</p>
-<a href="https://doi.org/10.3745/TKIPS.2026.15.7.610" target="_blank">Paper ↗</a>
-</div>
-</div>
-</div>
+  <div class="section-heading publications-heading">
+    <h2>Publications</h2>
+  </div>
+
+  <div class="pubs">
+
+    <div class="pub">
+
+      <span>2026</span>
+
+      <div>
+        <h3>
+          Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion
+        </h3>
+
+        <p>
+          <strong>Bomi Kwon</strong>, Ki Yong Lee
+        </p>
+
+        <p class="muted">
+          35th ACM International Conference on Information and Knowledge Management
+          (CIKM ’26) · Accepted Short Paper
+        </p>
+
+        <!--
+        CIKM PAPER LINK:
+        Add the public ACM / arXiv / proceedings URL here when available.
+
+        <a
+          href="PASTE_CIKM_PAPER_URL_HERE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Paper ↗</a>
+        -->
+
+      </div>
+
+    </div>
+
+
+    <div class="pub">
+
+      <span>2026</span>
+
+      <div>
+
+        <h3>
+          <a
+            class="inline-link"
+            href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space
+          </a>
+        </h3>
+
+        <p>
+          <strong>Bomi Kwon</strong>, Ki Yong Lee
+        </p>
+
+        <p class="muted">
+          The Transactions of the Korea Information Processing Society,
+          15(7), 610–619
+        </p>
+
+        <a
+          href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Paper ↗</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
-<section id="experience" class="section container"><div class="section-heading"><p class="eyebrow">Selected experience</p><h2>Research & Industry</h2></div><div class="grid">
-<div class="card"><small>Mar. 2025 – Present</small><h3>Graduate Researcher</h3><b>Data Intelligence Laboratory · Sookmyung Women’s University</b><p>Research on diffusion models, structured generation, text-conditioned generation, and constraint-aware generative modeling.</p></div>
-<div class="card"><small>Apr. 2026 – Oct. 2026</small><h3>Principal Investigator (Research Leader)</h3><b>Korea Foundation for Women in Science, Engineering and Technology (WISET) · STEM Research Team Project</b><p>Selected as one of 50 General Track research teams nationwide and awarded competitive research funding to lead a team of undergraduate researchers.</p></div>
-<div class="card"><small>2025 – Present</small><h3>Industry–Academic Collaboration</h3><b>AISUM · Product Matching, Semantic Matching & Agentic Retrieval</b><p>Large-scale retrieval systems using visual embeddings, LLM-based semantic search, Qdrant, MCP, and LangGraph.</p></div>
-<div class="card"><small>Jul. 2023 – Aug. 2024</small><h3>Founding Team Member / Product & Marketing Lead</h3><b>fitapat (ZOOC)</b><p>Originated and helped launch an AI pet-customization service; the platform and physical products were showcased at CES 2024.</p></div>
-</div></section>
-<section class="contact"><div class="container"><div><p class="eyebrow">Contact</p><h2>Research, collaboration, or academic opportunities</h2></div><a class="button primary" href="mailto:bomi9970@sookmyung.ac.kr">bomi9970@sookmyung.ac.kr</a></div></section>
-</main><footer><div class="container"><span>© 2026 Bomi Kwon</span><span>Seoul, Republic of Korea</span></div></footer>
-</body></html>
+
+
+<!-- ========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience" class="section container">
+
+  <div class="section-heading">
+    <p class="eyebrow">Selected experience</p>
+    <h2>Research & Industry</h2>
+  </div>
+
+  <div class="grid">
+
+
+    <!-- DILAB -->
+    <div class="card">
+
+      <small>Mar. 2025 – Present</small>
+
+      <h3>Graduate Researcher</h3>
+
+      <b>
+        <a
+          class="inline-link"
+          href="http://cs.sookmyung.ac.kr/~kylee/dilab/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Data Intelligence Laboratory</a>
+        · Sookmyung Women’s University
+      </b>
+
+      <p>
+        Advised by
+        <a
+          class="inline-link"
+          href="http://cs.sookmyung.ac.kr/~kylee/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Prof. Ki Yong Lee</a>.
+        Research on structured and controllable generative modeling.
+      </p>
+
+    </div>
+
+
+    <!-- WISET -->
+    <div class="card">
+
+      <small>Apr. 2026 – Oct. 2026</small>
+
+      <h3>Principal Investigator</h3>
+
+      <b>
+        Korea Foundation for Women in Science, Engineering and Technology
+        (WISET) · STEM Research Team Project
+      </b>
+
+      <p>
+        Selected as one of 50 General Track research teams nationwide and
+        awarded competitive research funding to lead a team of undergraduate
+        researchers.
+      </p>
+
+    </div>
+
+
+    <!-- AISUM -->
+    <div class="card">
+
+      <small>2025 – Present</small>
+
+      <h3>AISUM Industry–Academic Collaboration</h3>
+
+      <b>
+        Product Matching · Semantic Matching · Agentic Retrieval
+      </b>
+
+      <p>
+        Collaborate with AISUM on large-scale product retrieval systems spanning
+        visual matching, LLM-based semantic search, and agentic retrieval using
+        Qdrant, MCP, and LangGraph.
+      </p>
+
+    </div>
+
+
+    <!-- FITAPAT -->
+    <div class="card">
+
+      <small>Jul. 2023 – Aug. 2024</small>
+
+      <h3>Founding Team Member / Product & Marketing Lead</h3>
+
+      <b>fitapat (ZOOC)</b>
+
+      <p>
+        Co-founded and helped launch an AI pet-customization service connecting
+        generated pet characters to customized merchandise; the platform and
+        physical products were showcased at CES 2024.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact">
+
+  <div class="container">
+
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Research, collaboration, or academic opportunities</h2>
+    </div>
+
+    <a
+      class="button primary"
+      href="mailto:bomi9970@sookmyung.ac.kr"
+    >bomi9970@sookmyung.ac.kr</a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+  <div class="container">
+    <span>© 2026 Bomi Kwon</span>
+    <span>Seoul, Republic of Korea</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -29,13 +29,14 @@
 <style>
 
 :root {
-  --text: #262626;
+  --text: #292929;
   --muted: #66645f;
-  --soft: #8a8882;
-  --line: #dddcd6;
+  --soft: #888680;
+  --line: #deddd8;
   --accent: #315f59;
   --bg: #ffffff;
-  --max-width: 1040px;
+  --figure-bg: #fafafa;
+  --max-width: 1000px;
 }
 
 * {
@@ -58,7 +59,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration-color: #9a9a96;
+  text-decoration-color: #aaa8a2;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
@@ -73,13 +74,8 @@ a:hover {
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   TOP RULE
-========================================================= */
-
 .top-rule {
-  height: 7px;
+  height: 6px;
   background: #edf3eb;
   border-top: 1px solid #dfe9dc;
 }
@@ -91,40 +87,40 @@ a:hover {
 
 .intro {
   display: grid;
-  grid-template-columns: 48% 1fr;
-  gap: 54px;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
   align-items: center;
-  padding: 54px 0 28px;
+  padding: 54px 0 42px;
 }
 
 .profile-wrap {
-  width: 100%;
+  width: 300px;
 }
 
 .profile-photo {
   display: block;
-  width: 100%;
-  max-height: 480px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 28%;
   background: #f5f5f3;
 }
 
 .intro-copy {
-  padding-right: 10px;
+  max-width: 600px;
 }
 
 .intro-copy h1 {
-  margin: 0 0 22px;
+  margin: 0 0 18px;
   font-family: "Source Serif 4", Georgia, serif;
-  font-size: 42px;
+  font-size: 40px;
   line-height: 1.08;
-  letter-spacing: -0.7px;
+  letter-spacing: -0.6px;
   color: #171717;
 }
 
 .contact-line {
-  margin: 0 0 46px;
+  margin: 0 0 34px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -140,10 +136,9 @@ a:hover {
 }
 
 .intro-copy p {
-  margin: 0 0 24px;
-  max-width: 570px;
+  margin: 0 0 21px;
   font-size: 16px;
-  line-height: 1.82;
+  line-height: 1.8;
 }
 
 .intro-copy p:last-child {
@@ -152,36 +147,35 @@ a:hover {
 
 
 /* =========================================================
-   SECTION
+   SECTIONS
 ========================================================= */
 
 .section {
   border-top: 1px solid var(--line);
-  padding: 31px 0 35px;
+  padding: 32px 0 38px;
 }
 
 .section h2 {
-  margin: 0 0 28px;
+  margin: 0 0 27px;
   font-family: "Source Serif 4", Georgia, serif;
   font-size: 21px;
-  line-height: 1.2;
-  color: #1d1d1d;
+  line-height: 1.25;
+  color: #1c1c1c;
 }
 
 .subheading {
-  margin: 28px 0 14px;
+  margin: 30px 0 15px;
   font-size: 14px;
   font-weight: 700;
-  color: #3b3b39;
 }
 
 
 /* =========================================================
-   EDUCATION / EXPERIENCE ENTRIES
+   EDUCATION / EXPERIENCE
 ========================================================= */
 
 .entry {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .entry:last-child {
@@ -191,13 +185,13 @@ a:hover {
 .entry-top {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
   align-items: baseline;
+  gap: 30px;
 }
 
 .entry-title {
   font-weight: 700;
-  color: #383835;
+  color: #353533;
 }
 
 .entry-date {
@@ -217,8 +211,96 @@ a:hover {
 }
 
 .entry-note {
-  margin-top: 6px;
   max-width: 850px;
+  margin-top: 6px;
+}
+
+
+/* =========================================================
+   SELECTED RESEARCH
+========================================================= */
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: 215px 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #ecebe7;
+}
+
+.research-item:first-child {
+  padding-top: 0;
+}
+
+.research-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.research-thumb {
+  width: 215px;
+  height: 135px;
+  border: 1px solid #e6e5e0;
+  background: var(--figure-bg);
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.research-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.research-copy {
+  min-width: 0;
+}
+
+.research-meta {
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.research-title {
+  margin: 0 0 5px;
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 700;
+  color: #242422;
+}
+
+.research-authors {
+  margin: 0 0 7px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.research-authors strong {
+  color: #363634;
+}
+
+.research-description {
+  margin: 0;
+  line-height: 1.67;
+}
+
+.research-links {
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 
@@ -247,15 +329,10 @@ a:hover {
   margin: 0 0 3px;
   font-weight: 700;
   line-height: 1.48;
-  color: #292927;
 }
 
 .pub-authors {
   margin: 0 0 2px;
-}
-
-.pub-authors strong {
-  font-weight: 700;
 }
 
 .pub-venue {
@@ -266,9 +343,6 @@ a:hover {
 .pub-links {
   margin-top: 4px;
   font-size: 14px;
-}
-
-.pub-links a {
   font-weight: 500;
 }
 
@@ -286,11 +360,7 @@ a:hover {
 .compact-item {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 20px;
-}
-
-.compact-main {
-  min-width: 0;
+  gap: 22px;
 }
 
 .compact-main strong {
@@ -310,8 +380,7 @@ a:hover {
 
 footer {
   border-top: 1px solid var(--line);
-  margin-top: 7px;
-  padding: 24px 0 42px;
+  padding: 25px 0 42px;
   color: var(--soft);
   font-size: 13px;
 }
@@ -335,22 +404,35 @@ footer {
 
   .intro {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding-top: 30px;
+    gap: 27px;
+    padding: 32px 0 34px;
+  }
+
+  .profile-wrap,
+  .profile-photo {
+    width: 220px;
   }
 
   .profile-photo {
-    max-height: none;
-    aspect-ratio: 1 / 1;
-    object-position: center 25%;
+    height: 220px;
   }
 
   .intro-copy h1 {
-    font-size: 36px;
+    font-size: 35px;
   }
 
   .contact-line {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
+  }
+
+  .research-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .research-thumb {
+    width: 100%;
+    height: 185px;
   }
 
   .entry-top {
@@ -375,12 +457,10 @@ footer {
   .footer-inner {
     display: block;
   }
-
 }
 
 </style>
 </head>
-
 
 <body>
 
@@ -389,9 +469,9 @@ footer {
 <main class="page">
 
 
-<!-- =======================================================
+<!-- ======================================================
      INTRO
-======================================================== -->
+====================================================== -->
 
 <section class="intro">
 
@@ -403,7 +483,6 @@ footer {
     >
   </div>
 
-
   <div class="intro-copy">
 
     <h1>Bomi Kwon</h1>
@@ -412,9 +491,7 @@ footer {
       <a href="mailto:bomi9970@sookmyung.ac.kr">
         bomi9970@sookmyung.ac.kr
       </a>
-
       <span class="sep">·</span>
-
       <a href="bomicv.pdf" target="_blank">
         CV
       </a>
@@ -423,17 +500,13 @@ footer {
     <p>
       I am an M.S. student in Computer Science at
       <strong>Sookmyung Women’s University</strong> and a graduate researcher in the
-      <a
-        href="http://cs.sookmyung.ac.kr/~kylee/dilab/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Data Intelligence Laboratory</a>,
+      <a href="http://cs.sookmyung.ac.kr/~kylee/dilab/"
+         target="_blank"
+         rel="noopener noreferrer">Data Intelligence Laboratory</a>,
       advised by
-      <a
-        href="http://cs.sookmyung.ac.kr/~kylee/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Prof. Ki Yong Lee</a>.
+      <a href="http://cs.sookmyung.ac.kr/~kylee/"
+         target="_blank"
+         rel="noopener noreferrer">Prof. Ki Yong Lee</a>.
     </p>
 
     <p>
@@ -448,17 +521,15 @@ footer {
 </section>
 
 
-
-<!-- =======================================================
+<!-- ======================================================
      EDUCATION
-======================================================== -->
+====================================================== -->
 
 <section class="section" id="education">
 
   <h2>Education</h2>
 
   <div class="entry">
-
     <div class="entry-top">
       <div class="entry-title">
         Sookmyung Women’s University, Seoul, Republic of Korea
@@ -468,19 +539,11 @@ footer {
       </div>
     </div>
 
-    <div class="entry-role">
-      M.S. in Computer Science
-    </div>
-
-    <div class="entry-detail">
-      GPA: 4.41/4.5
-    </div>
-
+    <div class="entry-role">M.S. in Computer Science</div>
+    <div class="entry-detail">GPA: 4.41/4.5</div>
   </div>
 
-
   <div class="entry">
-
     <div class="entry-top">
       <div class="entry-title">
         Sookmyung Women’s University, Seoul, Republic of Korea
@@ -490,12 +553,140 @@ footer {
       </div>
     </div>
 
-    <div class="entry-role">
-      B.S. in Statistics
+    <div class="entry-role">B.S. in Statistics</div>
+    <div class="entry-role">B.B.A. in Business Administration</div>
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     SELECTED RESEARCH
+====================================================== -->
+
+<section class="section" id="research">
+
+  <h2>Selected Research</h2>
+
+  <div class="research-list">
+
+
+    <!-- CIKM -->
+    <div class="research-item">
+
+      <a href="assets/cikm_pipeline.png"
+         target="_blank"
+         class="research-thumb">
+        <img
+          src="assets/cikm_pipeline.png"
+          alt="Text-conditioned scene graph sequence generation pipeline"
+        >
+      </a>
+
+      <div class="research-copy">
+
+        <div class="research-meta">
+          CIKM 2026 · Short Paper
+        </div>
+
+        <h3 class="research-title">
+          Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion
+        </h3>
+
+        <p class="research-authors">
+          <strong>Bomi Kwon</strong>, Ki Yong Lee
+        </p>
+
+        <p class="research-description">
+          A discrete diffusion framework for generating time-ordered scene graph
+          sequences directly from natural-language descriptions of human–object interactions.
+        </p>
+
+        <!-- Add Paper link here once ACM link becomes available -->
+
+      </div>
+
     </div>
 
-    <div class="entry-role">
-      B.B.A. in Business Administration
+
+    <!-- HUMANOID -->
+    <div class="research-item">
+
+      <a href="assets/humanoid_robots.png"
+         target="_blank"
+         class="research-thumb">
+        <img
+          src="assets/humanoid_robots.png"
+          alt="Generated Unitree G1 humanoid robot poses"
+        >
+      </a>
+
+      <div class="research-copy">
+
+        <div class="research-meta">
+          Current Research · 2026
+        </div>
+
+        <h3 class="research-title">
+          Text-Conditioned Humanoid Robot Pose Generation with Physical Constraints
+        </h3>
+
+        <p class="research-authors">
+          <strong>Bomi Kwon</strong>, S. Park, Y. Park, Ki Yong Lee
+        </p>
+
+        <p class="research-description">
+          A text-conditioned diffusion model for generating static Unitree G1 poses
+          under joint-range and self-collision constraints, using human-motion
+          retargeting in MuJoCo.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- TKIPS -->
+    <div class="research-item">
+
+      <a href="assets/tkips_pipeline.png"
+         target="_blank"
+         class="research-thumb">
+        <img
+          src="assets/tkips_pipeline.png"
+          alt="Directional-angle diffusion pipeline for text-driven 2D pose generation"
+        >
+      </a>
+
+      <div class="research-copy">
+
+        <div class="research-meta">
+          TKIPS · 2026
+        </div>
+
+        <h3 class="research-title">
+          Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space
+        </h3>
+
+        <p class="research-authors">
+          <strong>Bomi Kwon</strong>, Ki Yong Lee
+        </p>
+
+        <p class="research-description">
+          A text-to-pose diffusion model that represents body segments by directional
+          angles rather than joint coordinates, preserving consistent skeletal proportions.
+        </p>
+
+        <div class="research-links">
+          <a href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
+             target="_blank"
+             rel="noopener noreferrer">
+            Paper ↗
+          </a>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -503,22 +694,18 @@ footer {
 </section>
 
 
-
-<!-- =======================================================
+<!-- ======================================================
      PUBLICATIONS
-======================================================== -->
+====================================================== -->
 
 <section class="section" id="publications">
 
   <h2>Publications & Research Outputs</h2>
 
 
-  <!-- CIKM -->
   <div class="publication">
 
-    <div class="pub-year">
-      2026
-    </div>
+    <div class="pub-year">2026</div>
 
     <div>
       <p class="pub-title">
@@ -533,29 +720,16 @@ footer {
         35th ACM International Conference on Information and Knowledge Management
         (CIKM ’26), Short Paper — Accepted
       </p>
-
-      <!--
-      Add the official ACM / proceedings / arXiv link here once available:
-
-      <div class="pub-links">
-        <a href="PAPER_URL" target="_blank">Paper</a>
-      </div>
-      -->
-
     </div>
 
   </div>
 
 
-  <!-- TKIPS -->
   <div class="publication">
 
-    <div class="pub-year">
-      2026
-    </div>
+    <div class="pub-year">2026</div>
 
     <div>
-
       <p class="pub-title">
         Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space
       </p>
@@ -570,13 +744,12 @@ footer {
       </p>
 
       <div class="pub-links">
-        <a
-          href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Paper ↗</a>
+        <a href="https://doi.org/10.3745/TKIPS.2026.15.7.610"
+           target="_blank"
+           rel="noopener noreferrer">
+          Paper ↗
+        </a>
       </div>
-
     </div>
 
   </div>
@@ -584,16 +757,11 @@ footer {
 
   <h3 class="subheading">Submitted Work</h3>
 
-
-  <!-- KICS -->
   <div class="publication">
 
-    <div class="pub-year">
-      2026
-    </div>
+    <div class="pub-year">2026</div>
 
     <div>
-
       <p class="pub-title">
         Text-Conditioned Diffusion for Static Humanoid Robot Pose Generation
         with Joint-Limit Embedding and Self-Collision Guidance
@@ -606,14 +774,12 @@ footer {
       <p class="pub-venue">
         Submitted to KICS 2026
       </p>
-
     </div>
 
   </div>
 
 
   <h3 class="subheading">Selected Presentations</h3>
-
 
   <div class="compact-list">
 
@@ -626,7 +792,6 @@ footer {
       <div class="compact-date">2026</div>
     </div>
 
-
     <div class="compact-item">
       <div class="compact-main">
         <strong>A Graph Generation Model for Text-based Graph Editing</strong>
@@ -634,7 +799,6 @@ footer {
       </div>
       <div class="compact-date">2025</div>
     </div>
-
 
     <div class="compact-item">
       <div class="compact-main">
@@ -652,17 +816,15 @@ footer {
 </section>
 
 
-
-<!-- =======================================================
-     RESEARCH & EXPERIENCE
-======================================================== -->
+<!-- ======================================================
+     EXPERIENCE
+====================================================== -->
 
 <section class="section" id="experience">
 
   <h2>Research & Experience</h2>
 
 
-  <!-- DILAB -->
   <div class="entry">
 
     <div class="entry-top">
@@ -678,16 +840,9 @@ footer {
       Sookmyung Women’s University
     </div>
 
-    <div class="entry-note">
-      Research on structured and controllable generative modeling,
-      including language-conditioned scene graph generation,
-      human pose generation, and physically constrained humanoid pose generation.
-    </div>
-
   </div>
 
 
-  <!-- WISET -->
   <div class="entry">
 
     <div class="entry-top">
@@ -706,14 +861,13 @@ footer {
     <div class="entry-note">
       Selected as one of 50 research teams nationwide and awarded
       KRW 7,000,000 in competitive research funding.
-      Lead two undergraduate researchers on synthetic human-pose
-      generation for industrial safety.
+      Lead two undergraduate researchers on synthetic human-pose generation
+      for industrial safety.
     </div>
 
   </div>
 
 
-  <!-- AISUM -->
   <div class="entry">
 
     <div class="entry-top">
@@ -730,14 +884,13 @@ footer {
     </div>
 
     <div class="entry-note">
-      Collaborate on large-scale product retrieval systems using
-      visual embeddings, semantic search, Qdrant, MCP, and LangGraph.
+      Collaborate on large-scale product retrieval systems using visual embeddings,
+      semantic search, Qdrant, MCP, and LangGraph.
     </div>
 
   </div>
 
 
-  <!-- FITAPAT -->
   <div class="entry">
 
     <div class="entry-top">
@@ -754,9 +907,9 @@ footer {
     </div>
 
     <div class="entry-note">
-      Co-founded and launched an AI-based pet customization service
-      connecting generated pet characters to customized merchandise.
-      The platform and physical products were showcased at CES 2024.
+      Co-founded and launched an AI-based pet customization service connecting
+      generated pet characters to customized merchandise. The platform and
+      physical products were showcased at CES 2024.
     </div>
 
   </div>
@@ -764,10 +917,9 @@ footer {
 </section>
 
 
-
-<!-- =======================================================
+<!-- ======================================================
      HONORS & LEADERSHIP
-======================================================== -->
+====================================================== -->
 
 <section class="section" id="honors">
 
@@ -775,58 +927,43 @@ footer {
 
   <div class="compact-list">
 
-
     <div class="compact-item">
       <div class="compact-main">
         <strong>Principal Investigator, WISET STEM Research Team Project</strong>
         — Selected as one of 50 research teams nationwide
       </div>
-      <div class="compact-date">
-        2026
-      </div>
+      <div class="compact-date">2026</div>
     </div>
-
 
     <div class="compact-item">
       <div class="compact-main">
         <strong>Sookmyung Leadership Activity Scholarship</strong>
       </div>
-      <div class="compact-date">
-        2023
-      </div>
+      <div class="compact-date">2023</div>
     </div>
-
 
     <div class="compact-item">
       <div class="compact-main">
         <strong>SOPT</strong>
         — Vice President, 32nd Cohort; Product Manager, 31st Cohort
       </div>
-      <div class="compact-date">
-        2022 – 2023
-      </div>
+      <div class="compact-date">2022 – 2023</div>
     </div>
-
 
     <div class="compact-item">
       <div class="compact-main">
         <strong>Sookmyung Admissions Ambassador “Polaris”</strong>
         — Vice President
       </div>
-      <div class="compact-date">
-        2021 – 2023
-      </div>
+      <div class="compact-date">2021 – 2023</div>
     </div>
-
 
     <div class="compact-item">
       <div class="compact-main">
         <strong>Statistics Korea (KOSTAT)</strong>
         — Volunteer Statistics Educator
       </div>
-      <div class="compact-date">
-        2021
-      </div>
+      <div class="compact-date">2021</div>
     </div>
 
   </div>
@@ -834,27 +971,12 @@ footer {
 </section>
 
 
-
-<!-- =======================================================
-     FOOTER
-======================================================== -->
-
 <footer>
-
   <div class="footer-inner">
-
-    <span>
-      © 2026 Bomi Kwon
-    </span>
-
-    <span>
-      Seoul, Republic of Korea
-    </span>
-
+    <span>© 2026 Bomi Kwon</span>
+    <span>Seoul, Republic of Korea</span>
   </div>
-
 </footer>
-
 
 </main>
 

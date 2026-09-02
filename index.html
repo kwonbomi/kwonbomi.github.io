@@ -101,7 +101,6 @@ a:hover {
   display: block;
   width: 280px;
   height: auto;
-  max-height: 360px;
   object-fit: contain;
   background: #f5f5f3;
 }
@@ -202,7 +201,7 @@ a:hover {
 }
 
 .entry-role {
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .entry-detail {
@@ -212,7 +211,13 @@ a:hover {
 
 .entry-note {
   max-width: 850px;
+  margin-top: 7px;
+}
+
+.entry-links {
   margin-top: 6px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 
@@ -415,8 +420,8 @@ footer {
 
   .profile-photo {
     height: auto;
-    max-height: none;
   }
+
   .intro-copy h1 {
     font-size: 35px;
   }
@@ -491,7 +496,9 @@ footer {
       <a href="mailto:bomi9970@sookmyung.ac.kr">
         bomi9970@sookmyung.ac.kr
       </a>
+
       <span class="sep">·</span>
+
       <a href="bomicv.pdf" target="_blank">
         CV
       </a>
@@ -499,7 +506,7 @@ footer {
 
     <p>
       I am an M.S. student in Computer Science at
-      <strong>Sookmyung Women’s University</strong> and a graduate researcher in the
+      <strong>Sookmyung Women’s University</strong> and a Research Assistant in the
       <a href="http://cs.sookmyung.ac.kr/~kylee/dilab/"
          target="_blank"
          rel="noopener noreferrer">Data Intelligence Laboratory</a>,
@@ -530,31 +537,19 @@ footer {
   <h2>Education</h2>
 
   <div class="entry">
-    <div class="entry-top">
-      <div class="entry-title">
-        Sookmyung Women’s University, Seoul, Republic of Korea
-      </div>
-      <div class="entry-date">
-        Mar. 2025 – Feb. 2027 (expected)
-      </div>
+
+    <div class="entry-title">
+      Sookmyung Women’s University, Seoul, Republic of Korea
     </div>
 
-    <div class="entry-role">M.S. in Computer Science</div>
-    <div class="entry-detail">GPA: 4.41/4.5</div>
-  </div>
-
-  <div class="entry">
-    <div class="entry-top">
-      <div class="entry-title">
-        Sookmyung Women’s University, Seoul, Republic of Korea
-      </div>
-      <div class="entry-date">
-        Mar. 2020 – Feb. 2025
-      </div>
+    <div class="entry-role">
+      M.S. in Computer Science · Mar. 2025 – Feb. 2027 (expected)
     </div>
 
-    <div class="entry-role">B.S. in Statistics</div>
-    <div class="entry-role">B.B.A. in Business Administration</div>
+    <div class="entry-role">
+      B.S. in Statistics; B.B.A. in Business Administration · Mar. 2020 – Feb. 2025
+    </div>
+
   </div>
 
 </section>
@@ -577,10 +572,12 @@ footer {
       <a href="assets/cikm_pipeline.png"
          target="_blank"
          class="research-thumb">
+
         <img
           src="assets/cikm_pipeline.png"
           alt="Text-conditioned scene graph sequence generation pipeline"
         >
+
       </a>
 
       <div class="research-copy">
@@ -602,7 +599,7 @@ footer {
           sequences directly from natural-language descriptions of human–object interactions.
         </p>
 
-        <!-- Add Paper link here once ACM link becomes available -->
+        <!-- Add paper link once ACM / proceedings link is public -->
 
       </div>
 
@@ -615,16 +612,18 @@ footer {
       <a href="assets/humanoid_robots.png"
          target="_blank"
          class="research-thumb">
+
         <img
           src="assets/humanoid_robots.png"
           alt="Generated Unitree G1 humanoid robot poses"
         >
+
       </a>
 
       <div class="research-copy">
 
         <div class="research-meta">
-          Current Research · 2026
+          KICS 2026 · Submitted
         </div>
 
         <h3 class="research-title">
@@ -652,10 +651,12 @@ footer {
       <a href="assets/tkips_pipeline.png"
          target="_blank"
          class="research-thumb">
+
         <img
           src="assets/tkips_pipeline.png"
           alt="Directional-angle diffusion pipeline for text-driven 2D pose generation"
         >
+
       </a>
 
       <div class="research-copy">
@@ -703,11 +704,16 @@ footer {
   <h2>Publications & Research Outputs</h2>
 
 
+  <!-- CIKM -->
+
   <div class="publication">
 
-    <div class="pub-year">2026</div>
+    <div class="pub-year">
+      2026
+    </div>
 
     <div>
+
       <p class="pub-title">
         Text-Conditioned Scene Graph Sequence Generation via Discrete Diffusion
       </p>
@@ -720,16 +726,22 @@ footer {
         35th ACM International Conference on Information and Knowledge Management
         (CIKM ’26), Short Paper — Accepted
       </p>
+
     </div>
 
   </div>
 
 
+  <!-- TKIPS -->
+
   <div class="publication">
 
-    <div class="pub-year">2026</div>
+    <div class="pub-year">
+      2026
+    </div>
 
     <div>
+
       <p class="pub-title">
         Text-driven 2D Human Pose Generation via Diffusion in Directional Angle Space
       </p>
@@ -750,18 +762,26 @@ footer {
           Paper ↗
         </a>
       </div>
+
     </div>
 
   </div>
 
 
-  <h3 class="subheading">Submitted Work</h3>
+  <!-- SUBMITTED -->
+
+  <h3 class="subheading">
+    Submitted Work
+  </h3>
 
   <div class="publication">
 
-    <div class="pub-year">2026</div>
+    <div class="pub-year">
+      2026
+    </div>
 
     <div>
+
       <p class="pub-title">
         Text-Conditioned Diffusion for Static Humanoid Robot Pose Generation
         with Joint-Limit Embedding and Self-Collision Guidance
@@ -774,41 +794,66 @@ footer {
       <p class="pub-venue">
         Submitted to KICS 2026
       </p>
+
     </div>
 
   </div>
 
 
-  <h3 class="subheading">Selected Presentations</h3>
+  <!-- PRESENTATIONS -->
+
+  <h3 class="subheading">
+    Selected Presentations
+  </h3>
 
   <div class="compact-list">
 
     <div class="compact-item">
+
       <div class="compact-main">
         <strong>Diffusion-based Skeleton Pose Editing</strong>
         — 2026 Spring Conference of the Korean Institute of Smart Media
         and the Korean Society of Digital Industry
       </div>
-      <div class="compact-date">2026</div>
+
+      <div class="compact-date">
+        2026
+      </div>
+
     </div>
 
+
     <div class="compact-item">
+
       <div class="compact-main">
         <strong>A Graph Generation Model for Text-based Graph Editing</strong>
         — Korea Software Congress (KSC)
       </div>
-      <div class="compact-date">2025</div>
+
+      <div class="compact-date">
+        2025
+      </div>
+
     </div>
 
+
     <div class="compact-item">
+
       <div class="compact-main">
+
         <strong>
           Development of a Large-Scale Graph Retrieval System based on LLM
           and Graph Database Providing a Natural Language Interface
         </strong>
+
         — Korea Computer Congress (KCC)
+
       </div>
-      <div class="compact-date">2025</div>
+
+      <div class="compact-date">
+        2025
+      </div>
+
     </div>
 
   </div>
@@ -817,7 +862,7 @@ footer {
 
 
 <!-- ======================================================
-     EXPERIENCE
+     RESEARCH & EXPERIENCE
 ====================================================== -->
 
 <section class="section" id="experience">
@@ -825,33 +870,48 @@ footer {
   <h2>Research & Experience</h2>
 
 
+  <!-- DILAB -->
+
   <div class="entry">
 
     <div class="entry-top">
+
       <div class="entry-title">
-        Graduate Researcher, Data Intelligence Laboratory
+        Research Assistant, Data Intelligence Laboratory
       </div>
+
       <div class="entry-date">
         Mar. 2025 – Present
       </div>
+
     </div>
 
     <div class="entry-role">
       Sookmyung Women’s University
     </div>
 
+    <div class="entry-note">
+      Research on structured and controllable generative modeling,
+      with a focus on diffusion-based structured generation.
+    </div>
+
   </div>
 
+
+  <!-- WISET -->
 
   <div class="entry">
 
     <div class="entry-top">
+
       <div class="entry-title">
         Principal Investigator, STEM Research Team Project
       </div>
+
       <div class="entry-date">
         Apr. 2026 – Oct. 2026
       </div>
+
     </div>
 
     <div class="entry-role">
@@ -859,24 +919,28 @@ footer {
     </div>
 
     <div class="entry-note">
-      Selected as one of 50 research teams nationwide and awarded
-      KRW 7,000,000 in competitive research funding.
-      Lead two undergraduate researchers on synthetic human-pose generation
-      for industrial safety.
+      Lead a team of two undergraduate researchers on text-conditioned
+      humanoid robot pose generation under physical constraints.
+      The resulting work was submitted to KICS 2026.
     </div>
 
   </div>
 
 
+  <!-- AISUM -->
+
   <div class="entry">
 
     <div class="entry-top">
+
       <div class="entry-title">
         Industry–Academic Collaboration with AISUM
       </div>
+
       <div class="entry-date">
         2025 – Present
       </div>
+
     </div>
 
     <div class="entry-role">
@@ -884,22 +948,27 @@ footer {
     </div>
 
     <div class="entry-note">
-      Collaborate on large-scale product retrieval systems using visual embeddings,
-      semantic search, Qdrant, MCP, and LangGraph.
+      Collaborate on large-scale product retrieval systems using
+      visual embeddings, semantic search, Qdrant, MCP, and LangGraph.
     </div>
 
   </div>
 
 
+  <!-- FITAPAT -->
+
   <div class="entry">
 
     <div class="entry-top">
+
       <div class="entry-title">
         Founding Team Member / Product & Marketing Lead
       </div>
+
       <div class="entry-date">
         Jul. 2023 – Aug. 2024
       </div>
+
     </div>
 
     <div class="entry-role">
@@ -907,9 +976,17 @@ footer {
     </div>
 
     <div class="entry-note">
-      Co-founded and launched an AI-based pet customization service connecting
-      generated pet characters to customized merchandise. The platform and
-      physical products were showcased at CES 2024.
+      Co-founded and launched an AI-based pet customization service
+      connecting generated pet characters to customized merchandise.
+      The platform and physical products were showcased at CES 2024.
+    </div>
+
+    <div class="entry-links">
+      <a href="https://www.instagram.com/fitapat.official/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Instagram ↗
+      </a>
     </div>
 
   </div>
@@ -927,43 +1004,79 @@ footer {
 
   <div class="compact-list">
 
+
     <div class="compact-item">
+
       <div class="compact-main">
-        <strong>Principal Investigator, WISET STEM Research Team Project</strong>
+        <strong>
+          Principal Investigator, WISET STEM Research Team Project
+        </strong>
         — Selected as one of 50 research teams nationwide
       </div>
-      <div class="compact-date">2026</div>
-    </div>
 
-    <div class="compact-item">
-      <div class="compact-main">
-        <strong>Sookmyung Leadership Activity Scholarship</strong>
+      <div class="compact-date">
+        2026
       </div>
-      <div class="compact-date">2023</div>
+
     </div>
 
+
     <div class="compact-item">
+
+      <div class="compact-main">
+        <strong>
+          Sookmyung Leadership Activity Scholarship
+        </strong>
+      </div>
+
+      <div class="compact-date">
+        2023
+      </div>
+
+    </div>
+
+
+    <div class="compact-item">
+
       <div class="compact-main">
         <strong>SOPT</strong>
         — Vice President, 32nd Cohort; Product Manager, 31st Cohort
       </div>
-      <div class="compact-date">2022 – 2023</div>
+
+      <div class="compact-date">
+        2022 – 2023
+      </div>
+
     </div>
 
+
     <div class="compact-item">
+
       <div class="compact-main">
-        <strong>Sookmyung Admissions Ambassador “Polaris”</strong>
+        <strong>
+          Sookmyung Admissions Ambassador “Polaris”
+        </strong>
         — Vice President
       </div>
-      <div class="compact-date">2021 – 2023</div>
+
+      <div class="compact-date">
+        2021 – 2023
+      </div>
+
     </div>
 
+
     <div class="compact-item">
+
       <div class="compact-main">
         <strong>Statistics Korea (KOSTAT)</strong>
         — Volunteer Statistics Educator
       </div>
-      <div class="compact-date">2021</div>
+
+      <div class="compact-date">
+        2021
+      </div>
+
     </div>
 
   </div>
@@ -971,12 +1084,26 @@ footer {
 </section>
 
 
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
 <footer>
+
   <div class="footer-inner">
-    <span>© 2026 Bomi Kwon</span>
-    <span>Seoul, Republic of Korea</span>
+
+    <span>
+      © 2026 Bomi Kwon
+    </span>
+
+    <span>
+      Seoul, Republic of Korea
+    </span>
+
   </div>
+
 </footer>
+
 
 </main>
 

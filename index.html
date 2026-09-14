@@ -35,6 +35,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
 
 <style>
 
@@ -130,18 +131,33 @@ a:hover {
 
 .contact-line {
   margin: 0 0 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
   font-size: 14px;
   font-weight: 600;
 }
 
 .contact-line a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
 }
 
-.contact-line .sep {
-  margin: 0 8px;
-  color: #aaa7a1;
-  font-weight: 400;
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.contact-scholar-icon {
+  width: 17px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1;
+  color: #4285f4;
 }
 
 .intro-copy p {
@@ -503,17 +519,51 @@ footer {
     <h1>Bomi Kwon</h1>
 
     <p class="contact-line">
-      <a href="mailto:bomi9970@sookmyung.ac.kr">
-        bomi9970@sookmyung.ac.kr
+
+      <a href="mailto:bomi9970@sookmyung.ac.kr"
+         aria-label="Email">
+        <svg class="contact-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+          <path d="M3 7l9 6 9-6"></path>
+        </svg>
+        <span>Email</span>
       </a>
 
-      <span class="sep">·</span>
+      <a href="https://scholar.google.com/citations?user=nEvHBHUAAAAJ"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Google Scholar">
+        <i class="ai ai-google-scholar contact-scholar-icon" aria-hidden="true"></i>
+        <span>Google Scholar</span>
+      </a>
 
       <a href="BomiKwon_CV.pdf"
          target="_blank"
-         rel="noopener noreferrer">
-        CV
+         rel="noopener noreferrer"
+         aria-label="Curriculum Vitae">
+        <svg class="contact-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+          <path d="M6 2h8l4 4v16H6z"></path>
+          <path d="M14 2v5h5"></path>
+          <path d="M9 13h6"></path>
+          <path d="M9 17h6"></path>
+        </svg>
+        <span>CV</span>
       </a>
+
     </p>
 
     <p>
@@ -992,29 +1042,29 @@ footer {
 
   <!-- WISET -->
   <div class="entry">
-  
+
     <div class="entry-top">
-  
+
       <div class="entry-title">
         Principal Investigator, STEM Research Team Project
       </div>
-  
+
       <div class="entry-date">
         Apr. 2026 – Oct. 2026
       </div>
-  
+
     </div>
-  
+
     <div class="entry-role">
       Korea Foundation for Women in Science, Engineering and Technology (WISET)
     </div>
-  
+
     <div class="entry-note">
       Lead a team of two undergraduate researchers on text-conditioned
       humanoid robot pose generation under physical constraints.
       The resulting work was submitted to KICS 2026.
     </div>
-  
+
     <div class="entry-links">
       <a href="https://www.sookmyung.ac.kr/kr/news/award-news.do?mode=view&amp;articleNo=93067&amp;article.offset=27&amp;articleLimit=9"
          target="_blank"
@@ -1022,7 +1072,7 @@ footer {
         Official News ↗
       </a>
     </div>
-  
+
   </div>
 
 
